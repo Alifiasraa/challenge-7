@@ -15,9 +15,11 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1", indexRoutes);
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log("Server is running on port: " + port);
-});
+// const port = process.env.PORT_SERVER;
+// app.listen(port, () => {
+//   console.log("Server is running on port: " + port);
+// });
 
 Sentry.setupExpressErrorHandler(app);
+
+module.exports = app;

@@ -22,7 +22,7 @@ const forgotPassword = async (body) => {
     from: "Admin",
     to: body.email,
     subject: "Reset Password",
-    text: `http://localhost:3000/api/v1/reset-password/${token}`,
+    text: `http://localhost:${process.env.PORT_CLIENT}/reset-password/${token}`,
   });
 };
 
